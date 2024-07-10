@@ -1,12 +1,12 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Navbar from '../components/NavBar.jsx';
+import NavBar from '../components/NavBar.jsx';
 
 
 function Layout() {
   return (
     <div>
-      <Navbar />
+      <NavBar />
       <Outlet />
     </div>
   );
