@@ -10,7 +10,7 @@ const HomePage = () => {
         axios.get('https://registry.npmjs.com/-/v1/search?text=react')
             .then(response => {
                 const packages = response.data.objects.map(obj => obj.package);
-                const reactPackage = packages.filter(pkg => pkg.name === 'react');
+                const reactPackage = packages.filter(pkt => pkt.name === 'react');
                 setAPIReactInfo(reactPackage[0]);
             })
             .catch(error => console.error(error));
@@ -18,7 +18,7 @@ const HomePage = () => {
         axios.get('https://registry.npmjs.com/-/v1/search?text=typescript')
             .then(response => {
                 const packages = response.data.objects.map(obj => obj.package);
-                const typescriptPackage = packages.filter(pkg => pkg.name === 'typescript');
+                const typescriptPackage = packages.filter(pkt => pkt.name === 'typescript');
                 setAPITypeScriptInfo(typescriptPackage[0]);
                 
             })
